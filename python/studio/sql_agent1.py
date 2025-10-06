@@ -1,16 +1,18 @@
+"""SQL agent for studio."""
 
-#sql_agent.py for studio
+import pathlib
+import re
+
+import requests
 from langchain.agents import create_agent
-from langchain_core.messages import SystemMessage
-
-
-# initialize an LLM
 from langchain.chat_models import init_chat_model
+from langchain_community.utilities import SQLDatabase
+from langchain_core.messages import SystemMessage
+from langchain_core.tools import tool
 
 llm = init_chat_model("openai:gpt-5")
 
 # Get the database, store it locally
-import requests, pathlib
 
 url = "https://storage.googleapis.com/benchmarks-artifacts/chinook/Chinook.db"
 local_path = pathlib.Path("Chinook.db")
@@ -25,20 +27,19 @@ else:
     else:
         print(f"Failed to download the file. Status code: {response.status_code}")
 
-from langchain_community.utilities import SQLDatabase
-
 db = SQLDatabase.from_uri("sqlite:///Chinook.db")
 
-#print(f"Dialect: {db.dialect}")
-#print(f"Available tables: {db.get_usable_table_names()}")
-#print(f'Sample output: {db.run("SELECT * FROM Artist LIMIT 5;")}')
+# print(f"Dialect: {db.dialect}")
+# print(f"Available tables: {db.get_usable_table_names()}")
+# print(f'Sample output: {db.run("SELECT * FROM Artist LIMIT 5;")}')
 
 SCHEMA = db.get_table_info()
 
-import re
-from langchain_core.tools import tool
-DENY_RE = re.compile(r"\b(INSERT|UPDATE|DELETE|ALTER|DROP|CREATE|REPLACE|TRUNCATE)\b", re.I)
+DENY_RE = re.compile(
+    r"\b(INSERT|UPDATE|DELETE|ALTER|DROP|CREATE|REPLACE|TRUNCATE)\b", re.I
+)
 HAS_LIMIT_TAIL_RE = re.compile(r"(?is)\blimit\b\s+\d+(\s*,\s*\d+)?\s*;?\s*$")
+
 
 def _safe_sql(q: str) -> str:
     # normalize
@@ -58,7 +59,8 @@ def _safe_sql(q: str) -> str:
     if not HAS_LIMIT_TAIL_RE.search(q):
         q += " LIMIT 5"
     return q
-    
+
+
 @tool
 def execute_sql(query: str) -> str:
     """Execute a READ-ONLY SQLite SELECT query and return results."""
@@ -72,8 +74,7 @@ def execute_sql(query: str) -> str:
         return f"Error: {e}"
 
 
-        
-SYSTEM = f"""You are a careful SQLite analyst.
+SYSTEM_PROMPT = f"""You are a careful SQLite analyst.
 
 Authoritative schema (do not invent columns/tables):
 {SCHEMA}
@@ -89,15 +90,14 @@ Rules:
 - Prefer explicit column lists; avoid SELECT *.
 """
 
-from langchain.agents import create_agent
-from langchain_core.messages import SystemMessage
+
 agent = create_agent(
     model=llm,
     tools=[execute_sql],
-    prompt=SystemMessage(content=SYSTEM),
+    system_prompt=SYSTEM_PROMPT,
 )
 
 # Example:
-#question = "Which genre on average has the longest tracks?"
-#for step in agent.stream({"messages": [{"role":"user","content": question}]}, stream_mode="values"):
+# question = "Which genre on average has the longest tracks?"
+# for step in agent.stream({"messages": [{"role":"user","content": question}]}, stream_mode="values"):
 #    step["messages"][-1].pretty_print()
