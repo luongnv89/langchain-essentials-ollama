@@ -14,6 +14,9 @@ importers:
       '@langchain/core':
         specifier: 1.0.0-alpha.6
         version: 1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11))
+      '@langchain/langgraph':
+        specifier: 1.0.0-alpha.1
+        version: 1.0.0-alpha.1(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))(zod-to-json-schema@3.24.6(zod@4.1.11))(zod@4.1.11)
       '@langchain/openai':
         specifier: 1.0.0-alpha.1
         version: 1.0.0-alpha.1(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))(ws@8.18.3)
@@ -642,6 +645,17 @@ packages:
       react:
         optional: true
       react-dom:
+        optional: true
+
+  '@langchain/langgraph@1.0.0-alpha.1':
+    resolution: {integrity: sha512-CQzPdCXYo4b3rG1x95bHD93sFw11HgZANNfG3NDIDfxntpL4VFwUaZHKfKvsL3PWU30Cm+LDnXl8rZocgibcGQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@langchain/core': '>=0.3.58 < 0.4.0 || ^1.0.0-alpha'
+      zod: ^3.25.32 || ^4.1.0
+      zod-to-json-schema: ^3.x
+    peerDependenciesMeta:
+      zod-to-json-schema:
         optional: true
 
   '@langchain/langgraph@1.0.0-alpha.5':
@@ -2276,6 +2290,19 @@ snapshots:
     optionalDependencies:
       '@langchain/core': 1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11))
 
+  '@langchain/langgraph@1.0.0-alpha.1(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))(zod-to-json-schema@3.24.6(zod@4.1.11))(zod@4.1.11)':
+    dependencies:
+      '@langchain/core': 1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11))
+      '@langchain/langgraph-checkpoint': 0.1.1(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))
+      '@langchain/langgraph-sdk': 0.1.9(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))
+      uuid: 10.0.0
+      zod: 4.1.11
+    optionalDependencies:
+      zod-to-json-schema: 3.24.6(zod@4.1.11)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@langchain/langgraph@1.0.0-alpha.5(@langchain/core@1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11)))(zod-to-json-schema@3.24.6(zod@4.1.11))(zod@4.1.11)':
     dependencies:
       '@langchain/core': 1.0.0-alpha.6(openai@5.12.2(ws@8.18.3)(zod@4.1.11))
@@ -2911,7 +2938,7 @@ snapshots:
       isstream: 0.1.2
       jsonwebtoken: 9.0.2
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.12.2)
+      retry-axios: 2.6.0(axios@1.12.2(debug@4.4.3))
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -3396,7 +3423,7 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  retry-axios@2.6.0(axios@1.12.2):
+  retry-axios@2.6.0(axios@1.12.2(debug@4.4.3)):
     dependencies:
       axios: 1.12.2(debug@4.4.3)
 
