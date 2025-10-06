@@ -1378,17 +1378,16 @@ wheels = [
 
 [[package]]
 name = "langchain"
-version = "1.0.0a10"
+version = "1.0.0a11"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "langchain-core" },
-    { name = "langchain-text-splitters" },
     { name = "langgraph" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8f/11/b2e86d831c0a75dcd405e60aa932cbfc43c997d0332f588a93b1e1a6cbfc/langchain-1.0.0a10.tar.gz", hash = "sha256:6624d993ba89c864c11e2def294689761c7b761b71b21697ce321b9041e9933a", size = 108041, upload-time = "2025-09-29T14:18:35.292Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/6f/3826a4975ec209eaa0e8060995635e37c5a5708ea55c5b0053fe79723275/langchain-1.0.0a11.tar.gz", hash = "sha256:74de34c635aac37a7664e3635ea00eae30714f01be5ca6077c99babadbb18a77", size = 403791, upload-time = "2025-10-06T19:15:22.233Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2f/4c/e8ecbf91a3e2eb48e39ce6fe6da97f5b6395ae0b20c2da89ba40fbff3f81/langchain-1.0.0a10-py3-none-any.whl", hash = "sha256:cb0c485649f41c323d4c573dffc978dd8f21375351723bfd887604f3040dd31c", size = 71484, upload-time = "2025-09-29T14:18:33.654Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/22/d89b6159dea9961ace2653b56e0e452ca7002b4783d0c1d22ced4388059a/langchain-1.0.0a11-py3-none-any.whl", hash = "sha256:a3233b335d1f27f9d21cc345e1de3144346db10c122d9c2d7aa61e5a41311431", size = 88261, upload-time = "2025-10-06T19:15:20.933Z" },
 ]
 
 [[package]]
@@ -1430,7 +1429,7 @@ wheels = [
 
 [[package]]
 name = "langchain-core"
-version = "1.0.0a5"
+version = "1.0.0a6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonpatch" },
@@ -1441,9 +1440,9 @@ dependencies = [
     { name = "tenacity" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/14/1b/fe9a3b9f7b6c9702a013a1ede5b1061f8240d4e7932b41cbe2328af775cb/langchain_core-1.0.0a5.tar.gz", hash = "sha256:fcbc025efcd6f9f9330ad8d49564efebab346002edf0e1bf6b8e08d500c072bf", size = 614066, upload-time = "2025-09-30T15:55:06.333Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c5/14/8ba54f4d2c40e3528e511a106aa95e6625083fb42607f1dc6797ce32181e/langchain_core-1.0.0a6.tar.gz", hash = "sha256:8c6d60cae6d7e6c3e3555ad05a4e65d0ae8167a7ee7b40233663209b019ffeae", size = 617086, upload-time = "2025-10-02T03:01:27.997Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/20/c3/3e26b77073dd27ef2024d83e7741ec22ca7f816b3c29d6321ae14dcaa0df/langchain_core-1.0.0a5-py3-none-any.whl", hash = "sha256:53d3e31a4f2fbaed3d3c2a149c3d5bcf362ebcb13592ae5d375c9d516af339f2", size = 480544, upload-time = "2025-09-30T15:55:04.565Z" },
+    { url = "https://files.pythonhosted.org/packages/65/83/b53010d854f76c4373f66bc05a3ea2b85644ddf928e5af7e41db5cc2f832/langchain_core-1.0.0a6-py3-none-any.whl", hash = "sha256:46bb8f5dfe3637cf5fa594a8e40ddd2d4fd1cb48559afaeeece0ea83bd715a22", size = 484625, upload-time = "2025-10-02T03:01:26.46Z" },
 ]
 
 [[package]]
@@ -1458,18 +1457,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/db/63/deef34172b1d454608c07a92c2cea1c1c745def5b7a3aad42667a3935d0f/langchain_openai-1.0.0a3.tar.gz", hash = "sha256:9aa35608a0125bfadc64ba044995fe3ca5b93b12067ba7063fade579aed9eda7", size = 801668, upload-time = "2025-09-30T17:11:16.304Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/05/67/cbc851457149ea48b66c6709fcb33903de2a052506b9201d59f202df7242/langchain_openai-1.0.0a3-py3-none-any.whl", hash = "sha256:849a4409ea1b6b4ef0ff4fe8e15e1bb37695f42e218085d64ad6d259b93c3953", size = 77366, upload-time = "2025-09-30T17:11:14.603Z" },
-]
-
-[[package]]
-name = "langchain-text-splitters"
-version = "0.3.11"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "langchain-core" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/11/43/dcda8fd25f0b19cb2835f2f6bb67f26ad58634f04ac2d8eae00526b0fa55/langchain_text_splitters-0.3.11.tar.gz", hash = "sha256:7a50a04ada9a133bbabb80731df7f6ddac51bc9f1b9cab7fa09304d71d38a6cc", size = 46458, upload-time = "2025-08-31T23:02:58.316Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/58/0d/41a51b40d24ff0384ec4f7ab8dd3dcea8353c05c973836b5e289f1465d4f/langchain_text_splitters-0.3.11-py3-none-any.whl", hash = "sha256:cf079131166a487f1372c8ab5d0bfaa6c0a4291733d9c43a34a16ac9bcd6a393", size = 33845, upload-time = "2025-08-31T23:02:57.195Z" },
 ]
 
 [[package]]
@@ -1964,6 +1951,7 @@ dependencies = [
     { name = "langchain" },
     { name = "langchain-anthropic" },
     { name = "langchain-community" },
+    { name = "langchain-core" },
     { name = "langchain-openai" },
     { name = "langgraph" },
     { name = "langgraph-cli", extra = ["inmem"] },
@@ -1978,9 +1966,10 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "jupyter", specifier = ">=1.0.0" },
-    { name = "langchain", specifier = ">=1.0.0a4" },
+    { name = "langchain", specifier = ">=1.0.0a11" },
     { name = "langchain-anthropic", specifier = ">=1.0.0a1" },
     { name = "langchain-community" },
+    { name = "langchain-core", specifier = ">=1.0.0a5" },
     { name = "langchain-openai", specifier = ">=1.0.0a2" },
     { name = "langgraph", specifier = ">=1.0.0a3" },
     { name = "langgraph-cli", extras = ["inmem"], specifier = ">=0.4.0" },
