@@ -1378,16 +1378,15 @@ wheels = [
 
 [[package]]
 name = "langchain"
-version = "1.0.0a11"
+version = "1.0.0a12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "langchain-core" },
     { name = "langgraph" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3a/6f/3826a4975ec209eaa0e8060995635e37c5a5708ea55c5b0053fe79723275/langchain-1.0.0a11.tar.gz", hash = "sha256:74de34c635aac37a7664e3635ea00eae30714f01be5ca6077c99babadbb18a77", size = 403791, upload-time = "2025-10-06T19:15:22.233Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/22/d89b6159dea9961ace2653b56e0e452ca7002b4783d0c1d22ced4388059a/langchain-1.0.0a11-py3-none-any.whl", hash = "sha256:a3233b335d1f27f9d21cc345e1de3144346db10c122d9c2d7aa61e5a41311431", size = 88261, upload-time = "2025-10-06T19:15:20.933Z" },
+    { url = "https://files.pythonhosted.org/packages/03/6c/41317c829368d72fe678f003a37a893d7f85c73413323343bf03fffff4e4/langchain-1.0.0a12-py3-none-any.whl", hash = "sha256:ec4fad49a4f2ab3544a428bb487385f6ab9160fa71c867afd9044d9dfc3ee9a3", size = 88250, upload-time = "2025-10-06T20:26:24.237Z" },
 ]
 
 [[package]]
@@ -1966,7 +1965,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "jupyter", specifier = ">=1.0.0" },
-    { name = "langchain", specifier = ">=1.0.0a11" },
+    { name = "langchain", specifier = ">=1.0.0a12" },
     { name = "langchain-anthropic", specifier = ">=1.0.0a1" },
     { name = "langchain-community" },
     { name = "langchain-core", specifier = ">=1.0.0a5" },
