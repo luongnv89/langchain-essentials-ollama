@@ -1,4 +1,3 @@
 ignoredBuiltDependencies:
   - esbuild
   - protobufjs
-  - sqlite3
