@@ -11,10 +11,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.14.0",
   "dependencies": {
+    "@langchain/classic": "file:../../langchainjs/libs/langchain-classic",
     "@langchain/community": "^0.3.57",
     "@langchain/core": "1.0.0-alpha.6",
-    "@langchain/classic": "file:../../langchainjs/libs/langchain-classic",
     "@langchain/langgraph": "1.0.0-alpha.1",
+    "@langchain/mcp-adapters": "^0.6.0",
     "@langchain/openai": "1.0.0-alpha.1",
     "dotenv": "^17.2.3",
     "langchain": "1.0.0-alpha.8",
