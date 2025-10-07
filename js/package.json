@@ -13,13 +13,21 @@
   "dependencies": {
     "@langchain/community": "^0.3.57",
     "@langchain/core": "1.0.0-alpha.6",
+    "@langchain/classic": "file:../../langchainjs/libs/langchain-classic",
     "@langchain/langgraph": "1.0.0-alpha.1",
     "@langchain/openai": "1.0.0-alpha.1",
     "dotenv": "^17.2.3",
-    "langchain": "1.0.0-alpha.7",
+    "langchain": "1.0.0-alpha.8",
     "sqlite3": "^5.1.7",
     "tsx": "^4.20.6",
     "typeorm": "^0.3.27",
-    "zod": "^4.1.11"
+    "zod": "^4.1.12"
+  },
+  "pnpm": {
+    "overrides": {
+      "@langchain/core": "1.0.0-alpha.6",
+      "@langchain/openai": "1.0.0-alpha.1",
+      "@langchain/textsplitters": "1.0.0-alpha.1"
+    }
   }
 }
