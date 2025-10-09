@@ -49,4 +49,26 @@ LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=lc-essentials
 ```
 
-4. Run notebooks with Runme by clicking opening a markdown file in VS Code (or right click on the file and selecting "Open in Runme")
+### Running Jupyter Notebooks
+
+If you don't have Jupyter installed, you can install it using pip or pipx:
+
+```bash
+# Using pip
+pip install jupyter jupyterlab
+
+# Or using pipx (recommended for isolated installation)
+pipx install jupyterlab
+```
+
+Once Jupyter is installed and the Deno kernel is set up (see Prerequisites), start Jupyter:
+
+```bash
+# Start Jupyter Lab (recommended)
+jupyter lab
+
+# Or start Jupyter Notebook
+jupyter notebook
+```
+
+This will open Jupyter in your browser. When opening any of the `.ipynb` files in this directory, make sure to select the **Deno** kernel from the kernel selector in the top-right corner of the notebook interface.
