@@ -14,13 +14,15 @@ globalThis.displayMessage = (message: BaseMessage) => {
     const icons = {
         human: "👤",
         ai: "🤖",
-        tool: "🔧"
+        tool: "🔧",
+        custom: "💡"
     };
     
     const colors = {
         human: "\x1b[36m",  // Cyan
         ai: "\x1b[35m",      // Magenta
         tool: "\x1b[33m",    // Yellow
+        custom: "\x1b[31m",    // Red
         reset: "\x1b[0m"
     };
     
