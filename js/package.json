@@ -1,18 +1,21 @@
 {
-  "name": "js",
+  "name": "LangChain Essentials Typescript",
+  "author": "Christian Bromann <christian@langchain.dev>",
+  "description": "LangChain Essentials Typescript",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "langchain",
+    "langchainjs",
+    "langchain-essentials",
+    "langchain-typescript"
+  ],
+  "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "dependencies": {
     "@langchain/anthropic": "^0.3.30",
-    "@langchain/classic": "file:../../langchainjs/libs/langchain-classic",
+    "@langchain/classic": "alpha",
     "@langchain/community": "^0.3.57",
     "@langchain/core": "1.0.0-alpha.6",
     "@langchain/langgraph": "1.0.0-alpha.1",
@@ -20,7 +23,7 @@
     "@langchain/openai": "1.0.0-alpha.1",
     "ansis": "^4.2.0",
     "dotenv": "^17.2.3",
-    "langchain": "file:../../langchainjs/libs/langchain",
+    "langchain": "alpha",
     "sqlite3": "^5.1.7",
     "tsx": "^4.20.6",
     "typeorm": "^0.3.27",
