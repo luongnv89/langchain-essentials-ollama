@@ -1,6 +1,6 @@
 # 🔗 LangChain Essentails V1.0
 
-## 🚀 Quickstart 
+## 🚀 Quickstart
 
 ### Prerequisites
 
@@ -20,26 +20,29 @@ You should be able to select the Deno kernel from the available kernels list.
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
 cd ./lca-langchainV1-essentials/js
 ```
 
-2. Install the package and dependencies:
+1. Install the package and dependencies:
+
 ```bash
 corepack enable
 pnpm install
 ```
 
-3. Create a `.env` file in the project root with your API keys:
+1. Create a `.env` file in the project root with your API keys:
+
 ```bash
 # Create .env file
 cp example.env .env
 ```
 
 Add your API keys to the `.env` file:
-```env
 
+```env
 # Required for model usage
 OPENAI_API_KEY=your_openai_api_key_here
 
@@ -65,10 +68,7 @@ Once Jupyter is installed and the Deno kernel is set up (see Prerequisites), sta
 
 ```bash
 # Start Jupyter Lab (recommended)
-jupyter lab
-
-# Or start Jupyter Notebook
-jupyter notebook
+python3 -m jupyterlab
 ```
 
 This will open Jupyter in your browser. When opening any of the `.ipynb` files in this directory, make sure to select the **Deno** kernel from the kernel selector in the top-right corner of the notebook interface.
