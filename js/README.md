@@ -1,4 +1,4 @@
-# 🔗 LangChain Essentails V1.0
+# 🔗 LangChain Essentials V1.0
 
 ## 🚀 Quickstart
 
