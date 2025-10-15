@@ -19,14 +19,13 @@ export PATH="/Users/$USER/.local/bin:$PATH"
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository, cd to python directory:
 ```bash
 git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
+cd ./lca-langchainV1-essentials/python
 ```
 
-1. cd python
-
-3. Install the package and dependencies (this automatically creates and manages the virtual environment):
+2. Install the package and dependencies (this automatically creates and manages the virtual environment):
 ```bash
 uv sync
 ```
@@ -62,14 +61,14 @@ jupyter lab
 5. Setup LangSmith Studio
 
 ```bash
-#copy the .env file you created above to the studio directory
+# copy the .env file you created above to the studio directory
 cp .env ./studio/.
 
 #to run
 langgraph dev
 ```
 For more information on the LangSmith Studio, see the [documentation](https://docs.langchain.com/oss/python/langchain/studio)
-
+# Lessons
 This repository contains nine short notebooks that serve as brief introductions to many of the most-used features in LangChain, starting with the new **Create Agent**.
 
 ---
