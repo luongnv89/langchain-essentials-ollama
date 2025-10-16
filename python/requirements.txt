@@ -1,0 +1,8 @@
+langgraph>=1.0.0a3
+langchain>=1.0.0a4
+langchain-openai>=1.0.0a2
+langchain-anthropic>=1.0.0a1
+langchain-community
+jupyter>=1.0.0
+langgraph-cli[inmem]>=0.4.0
+langchain-mcp-adapters
