@@ -3,7 +3,7 @@
 name = "notebooks-to-explore"
 version = "0.0.0"
 description = "A collection of tutorial notebooks"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 
 # Dependencies you need in the notebooks
 dependencies = [
