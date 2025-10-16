@@ -5,3 +5,4 @@ langchain-anthropic>=1.0.0a1
 langchain-community
 jupyter>=1.0.0
 langgraph-cli[inmem]>=0.4.0
+langchain-mcp-adapters
