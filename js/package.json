@@ -5,6 +5,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "pnpx @langchain/langgraph-cli dev"
+  },
   "keywords": [
     "langchain",
     "langchainjs",
@@ -29,6 +32,9 @@
     "tsx": "^4.20.6",
     "typeorm": "^0.3.27",
     "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@langchain/langgraph-cli": "latest"
   },
   "pnpm": {
     "overrides": {
