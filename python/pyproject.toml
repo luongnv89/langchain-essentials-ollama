@@ -7,11 +7,11 @@ requires-python = ">=3.11,<3.14"
 
 # Dependencies you need in the notebooks
 dependencies = [
-    "langgraph>=1.0.0a3",
-    "langchain>=1.0.0a12",
-    "langchain-core>=1.0.0a5",
-    "langchain-openai>=1.0.0a2",
-    "langchain-anthropic>=1.0.0a1",
+    "langgraph>=1.0.0",
+    "langchain>=1.0.0",
+    "langchain-core>=1.0.0",
+    "langchain-openai>=1.0.0",
+    "langchain-anthropic>=1.0.0",
     "langchain-community",
     "jupyter>=1.0.0",
     "langgraph-cli[inmem]>=0.4.0",
@@ -24,9 +24,6 @@ dev = [
     "ruff>=0.6.1",
     "mypy>=1.11.1"
 ]
-
-[tool.uv]
-prerelease = "allow"
 
 [tool.ruff]
 # What to check
