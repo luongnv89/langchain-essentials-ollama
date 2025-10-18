@@ -8,23 +8,59 @@
 - Ensure you're using Python 3.11 - 3.13.
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
 - OpenAI API key
+- Node.js and npx (required for MCP server in notebook 3):
+```bash
+# Install Node.js (includes npx)
+# On macOS with Homebrew:
+brew install node
+
+# On Ubuntu/Debian:
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Verify installation:
+node --version
+npx --version
+```
 
 ### Installation
+
+Download the course repository
 
 ```bash
 # Clone the repo, cd to 'python' directory
 git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
 cd ./lca-langchainV1-essentials/python
+```
 
+Make a copy of example.env
+
+```bash
 # Create .env file
 cp example.env .env
+```
 
+Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+
+```bash
 # Add OpenAI API key
 OPENAI_API_KEY=your_openai_api_key_here
 
-# Create environment
-uv sync
+# Optional API key for LangSmith tracing
+LANGSMITH_API_KEY=your_langsmith_api_key_here
+LANGSMITH_TRACING=true
+LANGSMITH_PROJECT=langgraph-py-essentials
+```
 
+Make a virtual environment and install dependancies
+```bash
+# Create virtual environment and install dependancies
+uv sync
+```
+
+Run notebooks
+
+```bash
 # Run Jupyter notebooks directly with uv
 uv run jupyter lab
 
@@ -33,7 +69,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 jupyter lab
 ```
 
-Setup [LangSmith Studio](https://docs.langchain.com/oss/python/langchain/studio)
+Optional: Setup [LangSmith Studio](https://docs.langchain.com/oss/python/langchain/studio)
 
 ```bash
 # copy the .env file you created above to the studio directory
@@ -43,20 +79,12 @@ cp .env ./studio/.
 langgraph dev
 ```
 
-**Optional:** LangSmith for evaluation and tracing
+### Getting Started with LangSmith
 
 - Create a [LangSmith](https://smith.langchain.com/) account
 - Create a LangSmith API key
 <img width="1196" height="693" alt="Screenshot 2025-10-16 at 8 28 03 AM" src="https://github.com/user-attachments/assets/e39b8364-c3e3-4c75-a287-d9d4685caad5" />
 <img width="1196" height="468" alt="Screenshot 2025-10-16 at 8 29 57 AM" src="https://github.com/user-attachments/assets/2e916b2d-e3b0-4c59-a178-c5818604b8fe" />
-
-
-```env
-# Add your API key to your .env file
-LANGSMITH_API_KEY=your_langsmith_api_key_here
-LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=lc-essentials
-```
 
 # 📚 Lessons
 This repository contains nine short notebooks that serve as brief introductions to many of the most-used features in LangChain, starting with the new **Create Agent**.
