@@ -76,11 +76,8 @@ This will open Jupyter in your browser. When opening any of the `.ipynb` files i
 5. Setup LangSmith Studio
 
 ```bash
-#copy the .env file you created above to the studio directory
-cp .env ./studio/.
-
 #to run
-langgraph dev
+pnpm langgraphjs dev
 ```
 For more information on the LangSmith Studio, see the [documentation](https://docs.langchain.com/oss/python/langchain/studio)
 
