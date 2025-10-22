@@ -2,16 +2,24 @@
 import "dotenv/config";
 import { createAgent, tool } from "langchain";
 import { ChatOpenAI } from "@langchain/openai";
+import { ChatAnthropic } from "@langchain/anthropic";
 import { DataSource } from "typeorm";
 import { SqlDatabase } from "@langchain/classic/sql_db";
 import { MemorySaver } from "@langchain/langgraph";
 import { z } from "zod";
 
+const key = process.env.ANTHROPIC_API_KEY;
+if (key === undefined) {
+  console.error("ANTHROPIC_API_KEY is not set");
+  process.exit(1);
+}
+
 /**
  * Model
- * - Uses your OpenAI key from .env if needed
+ * - Uses your Anthropic key from .env if needed
  */
-const llm = new ChatOpenAI({ model: "gpt-5" });
+// const llm = new ChatOpenAI({ model: "gpt-5" });
+const llm = new ChatAnthropic({ model: "claude-sonnet-4-5-20250929" });
 
 /**
  * Database
