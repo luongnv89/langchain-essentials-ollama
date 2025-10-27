@@ -45,6 +45,9 @@ Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#gett
 ```bash
 # Add OpenAI API key
 OPENAI_API_KEY=your_openai_api_key_here
+# The course is written with OpenAI models, but you can choose others if you prefer. 
+# Be sure to add the key and modify the code to call your preferred model
+#ANTHROPIC_API_KEY=your_anthropic_api_key_here_if_you_prefer
 
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
