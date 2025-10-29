@@ -50,6 +50,9 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=lc-essentials
+# If you are on the EU instance:
+LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+
 ```
 
 ### Running Jupyter Notebooks
