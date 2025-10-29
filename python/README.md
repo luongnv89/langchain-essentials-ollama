@@ -1,5 +1,12 @@
 # 🔗 LangChain Essentials Python
 
+## 🆕 Offline Ollama Support
+- All notebooks now default to the local `ollama gpt-oss:20b` model so you can complete the labs without paid APIs or an active internet connection.
+- Install and start [Ollama](https://ollama.com/download), then pull the model once: `ollama pull gpt-oss:20b`.
+- If you prefer a different provider, update the relevant notebook cells or environment variables—none of the existing OpenAI setup guidance was removed.
+- The walkthrough text still mentions OpenAI for context, but executable cells target the local model; adjust prompts as needed when switching providers.
+- Running on constrained hardware? Use `ollama list` to explore lighter-weight models that trade size for speed.
+
 
 ## 🚀 Setup 
 
